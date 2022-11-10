@@ -6,10 +6,10 @@ return (
 		<div>{props.number}</div>
 		<div>
 			<h3>{props.title}</h3>
-			<textarea 
+			{props.notes && <textarea 
 			value={props.notes}
 			onChange={(e) => console.log('click')}
-			></textarea>
+			></textarea>}
 		</div>
 	</div>
 );
