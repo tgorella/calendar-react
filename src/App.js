@@ -1,7 +1,5 @@
 import './App.css';
-import AddEventForm from './components/addEventForm';
 import Calendar from './components/calendar';
-import RandomNumber from './components/randomNumber';
 
 function App() {
   return (

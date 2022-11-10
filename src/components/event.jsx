@@ -6,10 +6,8 @@ return (
 		<div>{props.number}</div>
 		<div>
 			<h3>{props.title}</h3>
-			{props.notes && <textarea 
-			value={props.notes}
-			onChange={(e) => console.log('click')}
-			></textarea>}
+			{props.notes && 
+			<div className="note">{props.notes}</div>}
 		</div>
 	</div>
 );
