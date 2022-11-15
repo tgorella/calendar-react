@@ -1,11 +1,28 @@
-import React, {useState} from 'react';
-import Events from '../stats/eventslist';
+import React, {useState, useEffect} from 'react';
 import EventsList from './eventList';
 import AddEventForm from './addEventForm';
+import Events from '../stats/eventslist';
 
 
 const Calendar = () => {
-	const [events, setEvents] = useState(Events);
+
+	const [events, setEvents] = useState( JSON.parse(localStorage.getItem('MY_EVENTS')) != null 
+	? JSON.parse(localStorage.getItem('MY_EVENTS'))
+	: [...Events] );
+
+
+	useEffect(() => {
+		const EventsOld = JSON.parse(localStorage.getItem('MY_EVENTS'));
+		if (EventsOld) {
+		 setEvents(EventsOld);
+		}
+	}, []);
+
+	useEffect(() => {
+		localStorage.setItem('MY_EVENTS', JSON.stringify(events));
+	}, [events]);
+
+	console.log(events);
 	
 	const todayIs = new Date();
 	const [monthNumber, setMonthNumber] = useState(todayIs.getMonth());
@@ -14,13 +31,16 @@ const Calendar = () => {
 	const date = new Date(yearNumber, monthNumber, 1);
 	const monthStart = date.getDay();
 
-	const thisMonthEvents =events.filter( (item) => {
+	const thisMonthEvents = events.length > 0 
+	? (events.filter( (item) => {
 		return item['month'] == monthNumber && item['year'].includes(yearNumber)
-	});
+	}))
+	: [];
 	const daysWithEvents = [];
 	thisMonthEvents.forEach( (item) => {
 		daysWithEvents.push(item.day)
 	})
+
 
 	function upMonth () {
 		setMonthNumber(monthNumber + 1)

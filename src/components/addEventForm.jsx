@@ -13,9 +13,10 @@ const AddEventForm = (props) => {
 	const [category, setCategory] = useState('');
 	const [notes, setNotes] = useState('');
 
+
 	let [active, setActive] = useState(false);
 
-	function hadlerAddEvent (e) {
+	function handlerAddEvent (e) {
 		e.preventDefault();
 
 		const newEvent = 
@@ -92,7 +93,7 @@ const AddEventForm = (props) => {
 		>
 			</textarea>
 	<button 
-	onClick={hadlerAddEvent}>Добавить</button>
+	onClick={handlerAddEvent}>Добавить</button>
 			</form>
 			</>
 			: <div className="open-text" onClick={() => setActive(active = !active)}>Добавить новое событие</div> 

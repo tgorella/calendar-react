@@ -1,9 +1,7 @@
 import React, {useState} from 'react';
 import Event from './event';
-import Events from '../stats/eventslist';
 
 const EventsList = (props) => {
-	// const [events, setEvents] = useState(Events);
 
 	const thisMonthEvents = props.events.filter( (item) => {
 		return item['month'] == props.activeMonth && item['year'].includes(props.activeYear)

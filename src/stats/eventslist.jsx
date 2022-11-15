@@ -1,3 +1,5 @@
+import React from "react";
+
 const Events = [
 	{title: 'день народного единства',
 		month: 10,
@@ -6,14 +8,6 @@ const Events = [
 	notes: '',
 	cat: 'holidays',
 	id: 387938725,
-},
-{title: 'результаты Хакатона',
-		month: 10,
-		year: [2022],
-		day: 5,
-	notes: 'интересно, кто победит',
-	cat: 'personal',
-	id: 34795725,
 },
 {title: 'Новый год',
 		month: 11,
@@ -82,5 +76,7 @@ const Events = [
 	id: 34795709782425,
 }
 ]
+
+
 
 export default Events;
