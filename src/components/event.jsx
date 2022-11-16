@@ -9,7 +9,7 @@ return (
 			{props.notes && 
 			<div className="note">{props.notes}</div>}
 		</div>
-		<div className="delete" onClick={() => props.onDelete(props.id)}>X</div>
+		<div className="delete" onClick={() => props.onDelete(props.id)}><span>X</span></div>
 	</div>
 );
 }

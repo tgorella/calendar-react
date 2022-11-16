@@ -136,8 +136,21 @@ textarea {
 }
 
 .delete {
-	color: #aaa;
+	color: #fff;
 	cursor: pointer;
+}
+.delete span {
+	border: 1px solid #999;
+	border-radius: 3px;
+	background-color: #bbb;
+	text-align: center;
+	width: 18px;
+	height: 18px;
+	font-size: 12px;
+	opacity: 0.3;
+}
+.delete span:hover {
+	opacity: 1;
 }
 form {
 	display: flex;
