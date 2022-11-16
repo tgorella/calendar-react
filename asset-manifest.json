@@ -1,15 +1,15 @@
 {
   "files": {
-    "main.css": "/calendar-react/static/css/main.29397691.css",
-    "main.js": "/calendar-react/static/js/main.a060462f.js",
+    "main.css": "/calendar-react/static/css/main.7d9e1fbf.css",
+    "main.js": "/calendar-react/static/js/main.33734db8.js",
     "static/js/787.49a7682c.chunk.js": "/calendar-react/static/js/787.49a7682c.chunk.js",
     "index.html": "/calendar-react/index.html",
-    "main.29397691.css.map": "/calendar-react/static/css/main.29397691.css.map",
-    "main.a060462f.js.map": "/calendar-react/static/js/main.a060462f.js.map",
+    "main.7d9e1fbf.css.map": "/calendar-react/static/css/main.7d9e1fbf.css.map",
+    "main.33734db8.js.map": "/calendar-react/static/js/main.33734db8.js.map",
     "787.49a7682c.chunk.js.map": "/calendar-react/static/js/787.49a7682c.chunk.js.map"
   },
   "entrypoints": [
-    "static/css/main.29397691.css",
-    "static/js/main.a060462f.js"
+    "static/css/main.7d9e1fbf.css",
+    "static/js/main.33734db8.js"
   ]
 }
