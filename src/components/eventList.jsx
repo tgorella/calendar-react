@@ -13,7 +13,7 @@ const EventsList = (props) => {
 
 	return (
 		thisMonthEvents.map( (item) => (
-			<Event number={item.day} title={item.title} cat={item.cat} notes={item.notes} key={item.id}/>
+			<Event onDelete={props.onDelete} id={item.id} number={item.day} title={item.title} cat={item.cat} notes={item.notes} key={item.id}/>
 		)
 	))
 }

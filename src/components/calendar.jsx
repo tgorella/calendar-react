@@ -21,8 +21,6 @@ const Calendar = () => {
 	useEffect(() => {
 		localStorage.setItem('MY_EVENTS', JSON.stringify(events));
 	}, [events]);
-
-	console.log(events);
 	
 	const todayIs = new Date();
 	const [monthNumber, setMonthNumber] = useState(todayIs.getMonth());
@@ -52,6 +50,11 @@ const Calendar = () => {
 		setMonthNumber(monthNumber - 1)
 		setMonthNumber((prevState) => prevState === -1 ? prevState = 11 : prevState)
 		setYearNumber((prevState) => monthNumber === 0 ? prevState - 1 : prevState)
+	}
+
+	function handleDelete (id) {
+		setEvents(prevState => prevState.filter((item) => {
+			return item.id !== id}))
 	}
 
 	const CalendarHTML = () => {
@@ -111,7 +114,7 @@ const Calendar = () => {
 		</div>
 		< CalendarHTML key={Math.floor(Math.random() * 1000000)}/>
 		</div>
-  	<EventsList events={events} activeMonth={monthNumber} activeYear={yearNumber} key={Math.floor(Math.random() * 1000000)} />
+  	<EventsList onDelete={handleDelete} events={events} activeMonth={monthNumber} activeYear={yearNumber} key={Math.floor(Math.random() * 1000000)} />
 		</>
 	)
 }

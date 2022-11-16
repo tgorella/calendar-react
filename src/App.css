@@ -62,7 +62,7 @@ background-color: transparent;
 
 .events-item {
 	display: grid;
-	grid-template-columns: 1fr 10fr;
+	grid-template-columns: 1fr 10fr 1fr;
 	max-width: 315px;
 	padding: 0 10px;
 	margin: 0 auto 10px auto;
@@ -135,6 +135,10 @@ textarea {
 	font-size: 14px;
 }
 
+.delete {
+	color: #aaa;
+	cursor: pointer;
+}
 form {
 	display: flex;
 	flex-direction: column;
