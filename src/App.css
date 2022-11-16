@@ -70,15 +70,14 @@ background-color: transparent;
 
 }
 .events-item div:first-child {
-	text-align: center;
-	font-size: 18px;
+	align-items: flex-end;
+	border: 4px solid transparent;
+	font-size: 15px;
+	font-weight: 700;
+	height: 30px;
 	margin-right: 10px;
-	font-weight: bold;
- width: 30px;
- height: 30px;
- border-radius: 50%;
- align-items: center;
- border: 8px solid transparent;
+	width: 30px;
+	padding-right: 5px;
 }
 .events-item div {
 	display: flex;
@@ -87,7 +86,7 @@ background-color: transparent;
 }
 .events-item h3 {
 	font-weight: 500;
-	font-size: 14px;
+	font-size: 13px;
 }
 .events-item p {
 	color: #777;
@@ -98,25 +97,20 @@ background-color: transparent;
 	border: 3px solid #fff;
 }
 .work div:first-child {
-	background: #ccb5da!important;
-	color: #fff;
-
+	border-right-color: #ccb5da!important;
 }
 
 .friends div:first-child {
-	background: #b4d084;
-	color: #fff;
+	border-right-color: #b4d084;
 
 }
 
 .personal div:first-child {
- color: #fff;
- background: #ff7e9c;
+	border-right-color: #ff7e9c;
 	
 }
 .family div:first-child {
- color: #fff;
- background: #ffbe5d!important;
+	border-right-color: #ffbe5d!important;
 }
 .today {
 	border: 1px solid #333;
@@ -132,7 +126,7 @@ textarea {
 .note {
 	font-family: 'IBM Plex Sans', sans-serif;
 	color: #777;
-	font-size: 14px;
+	font-size: 12px;
 }
 
 .delete {
